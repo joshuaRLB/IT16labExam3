@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Application</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        
+body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="container">
+            <h1>CRUD Application</h1>
+
+            <form id="itemForm">
+                <label for="email">Name:</label>
+                <input type="text" id="email" placeholder="Gmail@gmail.com" required>
+                <label for="password">Password:</label>
+                <input type="text" id="password" placeholder="*********" required>
+                <button type="button" onclick="addItem()">Add Item</button>
+            </form>
+
+            <table id="itemTable">
+                <thead>
+                    <tr>
+                        <th>Email</th>
+                        <th>Password</th>
+                    </tr>
+                </thead>
+                <tbody id="itemList"></tbody>
+            </table>
+
+            <div class="actions">
+                <button onclick="editSelected()">Edit Selected</button>
+                <button onclick="deleteSelected()">Delete Selected</button>
+            </div>
+
+            <button onclick="navigateToLogin()">Go Back</button>
+            <button onclick="backupData()">Backup</button>
+            <button onclick="recoverData()">Recover</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
